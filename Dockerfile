@@ -1,4 +1,4 @@
-ROM ginuerzh/gost:latest
+FROM ginuerzh/gost:latest
 
 # Expose the default proxy port
 EXPOSE 8080
