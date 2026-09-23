@@ -1,6 +1,7 @@
-FROM ginuerzh/gost:latest
+ROM ginuerzh/gost:latest
 
-ENV PORT=8080
+# Expose the default proxy port
+EXPOSE 8080
 
-ENTRYPOINT []
-CMD ["sh", "-c", "exec gost -L=wss://sudo:sudo@0.0.0.0:${PORT}"]
+# Run gost as a WebSocket (ws) proxy with authentication
+CMD ["-L=ws://sudo:sudo@:8080"]
